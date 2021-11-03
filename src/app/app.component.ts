@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(private http: HttpClient){}
 
   ngOnInit() {
-    this.http.get("https://www.datos.gov.co/resource/rubk-nymq.json")
+    this.http.get("https://www.datos.gov.co/resource/6sqw-8cg5.json")
       .subscribe(
         result => {
           this.articulos = result;

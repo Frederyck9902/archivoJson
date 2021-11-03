@@ -1,11 +1,21 @@
 <div *ngIf="articulos!=null; else espera">
-  <table>
-    <tr>
-      <td>Usuario Principal</td>
-    </tr>
-    <tr *ngFor="let art of articulos">
-      <td>{{ art.user_principal_name }}</td>
-    </tr>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Departamento</th>
+        <th scope="col">Municipio</th>
+        <th scope="col">Arma del hurto</th>
+        <th scope="col">Fecha del hurto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let art of articulos">
+        <td>{{ art.departamento }}</td>
+        <td>{{ art.municipio }}</td>
+        <td>{{ art.armas_medios }}</td>
+        <td>{{ art.fecha_hecho }}</td>
+      </tr>
+    </tbody>
   </table>
 </div>
 <ng-template #espera>Esperando datos...</ng-template>
